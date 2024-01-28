@@ -1,9 +1,10 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, "src", "app.tsx"),
+  entry: ["./node_modules/react", path.join(__dirname, "src", "app.tsx")],
   output: {
     path:path.resolve(__dirname, "dist")
   },
@@ -32,5 +33,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html"),
     }),
+    new webpack.ProvidePlugin({
+      React: 'react'
+    })
   ],
 }

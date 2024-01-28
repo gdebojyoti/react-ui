@@ -1,9 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { StrictMode } from 'react'
+import ReactDOM from 'react-dom/client'
 
 import DemoPage from 'pages/Demo'
 
-ReactDOM.render(
-    <DemoPage />,
-  document.getElementById('dxgui-root')
+const root = ReactDOM.createRoot(document.getElementById("dxgui-root") as HTMLElement)
+root.render(
+  <StrictMode>
+    <DemoPage />
+  </StrictMode>
 )
