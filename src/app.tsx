@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import DemoPage from 'pages/Demo'
+
 ReactDOM.render(
-    <h1>I got in.</h1>,
+    <DemoPage />,
   document.getElementById('dxgui-root')
 )
